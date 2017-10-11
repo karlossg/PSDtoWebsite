@@ -4,13 +4,12 @@
   @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic);
 
 /******* VARIABLES *******/
-  $dark_grey: #313234;
-  $light_grey: rgb(152,
-  154,
-  158);
-  $my_white: #FFF;
-  $my_blue: #4C71BB;
-  $my_navy: #7BC9E0;
+  $mainBackground: #313234;
+  $hoverBlue: #4C71BB;
+  $mainParagraphAndHeadings: #989A9E;
+  $mainFontColor: #FFF;
+  $secondaryBackgroundAndBorder: #FFF;
+  $secondaryBlue: #7BC9E0;
 
 /******* MIXINS *******/
 @mixin border-radius($radius) {
@@ -27,10 +26,14 @@
     transform: translate($percent, $percent);
   }
 
+@mixin squareSize ($size) {
+  width: $size;
+  height: $size;
+}
 
 /******* MAIN *******/
   body {
-    margin: 0px 0px;
+    margin: 2px 0px;
     font-family: Quicksand, 'Open Sans', sans-serif;
   }
 
@@ -40,7 +43,7 @@
   /******* HEADER *******/
 
   header {
-    background-color: $dark_grey;
+    background-color: $mainBackground;
     >nav {
       ul {
         float: right;
@@ -52,12 +55,12 @@
           >a {
             line-height: 50px;
             display: block;
-            color: #fff;
+            color: $mainFontColor;
             padding: 0 20px;
             text-decoration: none;
             text-transform: uppercase;
             &:hover {
-              background: #ccc;
+              background: $secondaryBackgroundAndBorder;
             }
           }
         }
@@ -84,28 +87,27 @@
     max-width: 600px;
     max-height: 300px;
     text-transform: uppercase;
-    color: $my_white;
+    color: $mainFontColor;
     margin: 6% 0;
   }
   /******* ICONS *******/
 
   .icon {
     border: 6px solid;
-    width: 125px;
-    height: 125px;
+    @include squareSize(125px);
     @include border-radius (15px);
     margin: 50px auto;
-    background-color: $dark_grey;
-    color: $my_white;
+    background-color: $mainBackground;
+    color: $mainFontColor;
     i {
         margin: 25px;
     }
     &:hover {
       cursor: pointer;
-      background-color: $my_blue;
-      color: $my_white;
+      background-color: $hoverBlue;
+      color: $mainFontColor;
       ~h2 {
-        color: $my_blue;
+        color: $hoverBlue;
       }
     }
   }
@@ -114,7 +116,7 @@
     text-align: center;
     h2 {
       text-transform: uppercase;
-      color: $dark_grey;
+      color: $mainBackground;
     }
     p {
         font-size: 18px;
@@ -126,21 +128,21 @@
   .left {
     @extend .benefits;
     p {
-        color: $light_grey;
+        color: $mainParagraphAndHeadings;
     }
   }
 
   .center {
     @extend .benefits;
     p {
-        color: $dark_grey;
+        color: $mainBackground;
     }
   }
 
   .right {
     @extend .benefits;
     p {
-        color: $my_navy;
+        color: $secondaryBlue;
     }
   }
 
@@ -157,7 +159,7 @@
     }
     p {
       margin-top: 20px;
-      color: $light_grey;
+      color: $mainParagraphAndHeadings;
     }
   }
   /******* GALERRY *******/
@@ -208,7 +210,7 @@
       margin-left: 16%;
       width: 35px;
       height: 32px;
-      background-color: $my_white;
+      background-color: $secondaryBackgroundAndBorder;
       @include border-radius(10%);
     }
     i {
@@ -228,14 +230,13 @@
       font-size: bold;
     }
     h3 {
-      color: $light_grey;
+      color: $mainParagraphAndHeadings;
     }
   }
 
   .image-team {
     @include border-radius(50%);
-    width: 200px;
-    height: 200px;
+    @include squareSize(200px);
   }
   /******* TABLET *******/
 
@@ -263,9 +264,9 @@
     margin-left: 15%;
     height: 35vh;
     width: 25vw;
-    border-top: 40px solid $dark_grey;
-    border-left: 40px solid $dark_grey;
-    border-right: 40px solid $dark_grey;
+    border-top: 40px solid $mainBackground;
+    border-left: 40px solid $mainBackground;
+    border-right: 40px solid $mainBackground;
     border-top-right-radius: 7%;
     border-top-left-radius: 7%;
     max-width: 50%;
@@ -294,20 +295,20 @@
     font-size: 80px;
     font-weight: bolder;
     margin-bottom: 3px;
-    color: $dark_grey;
+    color: $mainBackground;
   }
 
   .description {
     margin-top: 2px;
     font-size: 20px;
     text-transform: uppercase;
-    color: $my_navy;
+    color: $secondaryBlue;
   }
   /******* FOOTER *******/
 
   footer {
     background-color: #181E24;
-    color: $my_white;
+    color: $mainFontColor;
     text-align: center;
     p {
         margin: 0 auto;
@@ -316,8 +317,8 @@
   }
 
   .footer {
-    background-color: $dark_grey;
-    color: $my_white;
+    background-color: $mainBackground;
+    color: $mainFontColor;
     margin-top: 40px auto;
     h1 {
         text-transform: uppercase;
@@ -329,10 +330,9 @@
     i {
         font-size: 16px;
         margin: 2px;
-        color: $my_white;
-        background-color: $my_navy;
-        width: 12px;
-        height: 12px;
+        color: $mainFontColor;
+        background-color: $secondaryBlue;
+        @include squareSize(12px);
         padding: 12px;
     }
   }
@@ -354,10 +354,10 @@
   }
 
   .line {
-    color: $my_white;
+    color: $mainFontColor;
     width: 5vw;
     height: 1px;
-    border-bottom: 2px solid $my_white;
+    border-bottom: 2px solid $secondaryBackgroundAndBorder;
     position: absolute;
     margin-top: -35px;
     &.line-about {
@@ -499,8 +499,7 @@
     }
     .square {
       border: 6px solid;
-      width: 125px;
-      height: 125px;
+      @include squareSize(125px);
       @include border-radius(15px);
     }
     i {
@@ -513,8 +512,7 @@
     }
     /******* TEAM *******/
     .image-team {
-      width: 150px;
-      height: 150px;
+      @include squareSize(150px);
     }
     .team-container {
       &:hover {
@@ -597,8 +595,7 @@
       display: block;
     }
     .image-team {
-      width: 125px;
-      height: 125px;
+      @include squareSize(125px);
     }
     .line {
       width: 60px;

@@ -6,7 +6,7 @@
 /******* MIXINS *******/
 /******* MAIN *******/
 body {
-  margin: 0px 0px;
+  margin: 2px 0px;
   font-family: Quicksand, 'Open Sans', sans-serif; }
 
 img {
@@ -25,12 +25,12 @@ header {
       header > nav ul > li > a {
         line-height: 50px;
         display: block;
-        color: #fff;
+        color: #FFF;
         padding: 0 20px;
         text-decoration: none;
         text-transform: uppercase; }
         header > nav ul > li > a:hover {
-          background: #ccc; }
+          background: #FFF; }
   header > nav img {
     padding: 10px 0; }
 
@@ -84,7 +84,7 @@ header {
     margin: 5%; }
 
 .left p {
-  color: #989a9e; }
+  color: #989A9E; }
 
 .center p {
   color: #313234; }
@@ -102,7 +102,7 @@ header {
     font-size: 45px; }
   .works p {
     margin-top: 20px;
-    color: #989a9e; }
+    color: #989A9E; }
 
 /******* GALERRY *******/
 .gallery {
@@ -164,7 +164,7 @@ header {
     font-size: 25px;
     font-size: bold; }
   .team h3 {
-    color: #989a9e; }
+    color: #989A9E; }
 
 .image-team {
   -webkit-border-radius: 50%;
