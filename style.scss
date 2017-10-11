@@ -1,0 +1,624 @@
+/******* FONTS *******/
+  @import url('https://fonts.googleapis.com/css?family=Quicksand');
+  @import url('https://fonts.googleapis.com/css?family=Crete+Round');
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic);
+
+/******* VARIABLES *******/
+  $dark_grey: #313234;
+  $light_grey: rgb(152,
+  154,
+  158);
+  $my_white: #FFF;
+  $my_blue: #4C71BB;
+  $my_navy: #7BC9E0;
+
+/******* MIXINS *******/
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+  }
+
+@mixin transform($percent, $percent) {
+    -webkit-transform: translate($percent, $percent);
+    -moz-transform: translate($percent, $percent);
+    -ms-transform: translate($percent, $percent);
+    transform: translate($percent, $percent);
+  }
+
+
+/******* MAIN *******/
+  body {
+    margin: 0px 0px;
+    font-family: Quicksand, 'Open Sans', sans-serif;
+  }
+
+  img {
+    object-fit: cover;
+  }
+  /******* HEADER *******/
+
+  header {
+    background-color: $dark_grey;
+    >nav {
+      ul {
+        float: right;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        >li {
+          display: inline-block;
+          >a {
+            line-height: 50px;
+            display: block;
+            color: #fff;
+            padding: 0 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            &:hover {
+              background: #ccc;
+            }
+          }
+        }
+      }
+      img {
+        padding: 10px 0;
+      }
+    }
+  }
+  /******* JUMBOTRON *******/
+
+  .hero {
+    background-image: url(https://static.pexels.com/photos/583842/pexels-photo-583842.jpeg);
+    background-size: cover;
+    height: 400px;
+    margin: 0 auto;
+  }
+
+  .slogan {
+    background-color: rgba(125, 123, 125, 0.6);
+    font-size: 25px;
+    padding: 25px 45px 25px 25px;
+    float: right;
+    max-width: 600px;
+    max-height: 300px;
+    text-transform: uppercase;
+    color: $my_white;
+    margin: 6% 0;
+  }
+  /******* ICONS *******/
+
+  .icon {
+    border: 6px solid;
+    width: 125px;
+    height: 125px;
+    @include border-radius (15px);
+    margin: 50px auto;
+    background-color: $dark_grey;
+    color: $my_white;
+    i {
+        margin: 25px;
+    }
+    &:hover {
+      cursor: pointer;
+      background-color: $my_blue;
+      color: $my_white;
+      ~h2 {
+        color: $my_blue;
+      }
+    }
+  }
+
+  .benefits {
+    text-align: center;
+    h2 {
+      text-transform: uppercase;
+      color: $dark_grey;
+    }
+    p {
+        font-size: 18px;
+        font-weight: 4px;
+        margin: 5%;
+    }
+  }
+
+  .left {
+    @extend .benefits;
+    p {
+        color: $light_grey;
+    }
+  }
+
+  .center {
+    @extend .benefits;
+    p {
+        color: $dark_grey;
+    }
+  }
+
+  .right {
+    @extend .benefits;
+    p {
+        color: $my_navy;
+    }
+  }
+
+  
+  /******* FEATURED WORKS *******/
+
+  .works {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 60%;
+    h1 {
+      text-transform: uppercase;
+      font-size: 45px;
+    }
+    p {
+      margin-top: 20px;
+      color: $light_grey;
+    }
+  }
+  /******* GALERRY *******/
+
+  .gallery {
+    overflow: hidden;
+    font-size: 0;
+  }
+
+  .img-container {
+    position: relative;
+    width: 100%;
+    &:hover {
+      .image {
+        opacity: 0.3;
+      }
+      .middle {
+        opacity: 1;
+      }
+    }
+  }
+
+  .image-gallery {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: 205px;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(-50%, -50%);
+    width: 98%;
+    margin-left: 12%;
+  }
+
+  .visible {
+    >div {
+      position: relative;
+      float: left;
+      font-size: 10px;
+      margin-left: 16%;
+      width: 35px;
+      height: 32px;
+      background-color: $my_white;
+      @include border-radius(10%);
+    }
+    i {
+      margin: 10px;
+    }
+  }
+  /******* TEAM *******/
+
+  .team {
+    margin: 5% 0;
+    width: 100%;
+    text-align: center;
+    p {
+      width: 50%;
+      margin: 0 10% 12% 10%;
+      font-size: 25px;
+      font-size: bold;
+    }
+    h3 {
+      color: $light_grey;
+    }
+  }
+
+  .image-team {
+    @include border-radius(50%);
+    width: 200px;
+    height: 200px;
+  }
+  /******* TABLET *******/
+
+  .tablet {
+    background-color: #C2BFBF;
+    margin: 50px auto;
+    margin-bottom: 15px;
+    width: 100%;
+    h2 {
+        font-size: 35px;
+        text-transform: uppercase;
+        font-weight: bolder;
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 13px;
+        margin: 2%;
+        padding: 2%;
+    }
+  }
+
+  .tablet-border {
+    margin-top: 6%;
+    margin-left: 15%;
+    height: 35vh;
+    width: 25vw;
+    border-top: 40px solid $dark_grey;
+    border-left: 40px solid $dark_grey;
+    border-right: 40px solid $dark_grey;
+    border-top-right-radius: 7%;
+    border-top-left-radius: 7%;
+    max-width: 50%;
+    img {
+        position: relative;
+        height: 35vh;
+        width: 25vw;
+        max-width: 100%;
+    }
+  }
+
+  .tablet-text-right {
+    font-style: italic;
+  }
+  /******* NUMBERS *******/
+
+  .numbers {
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin: 20px auto;
+    font-family: 'Crete Round', 'Open Sans', sans-serif;
+  }
+
+  .number {
+    font-size: 80px;
+    font-weight: bolder;
+    margin-bottom: 3px;
+    color: $dark_grey;
+  }
+
+  .description {
+    margin-top: 2px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: $my_navy;
+  }
+  /******* FOOTER *******/
+
+  footer {
+    background-color: #181E24;
+    color: $my_white;
+    text-align: center;
+    p {
+        margin: 0 auto;
+        padding: 25px;
+    }
+  }
+
+  .footer {
+    background-color: $dark_grey;
+    color: $my_white;
+    margin-top: 40px auto;
+    h1 {
+        text-transform: uppercase;
+        width: 80%;
+    }
+    p {
+        width: 80%;
+    }
+    i {
+        font-size: 16px;
+        margin: 2px;
+        color: $my_white;
+        background-color: $my_navy;
+        width: 12px;
+        height: 12px;
+        padding: 12px;
+    }
+  }
+
+  .col-6{
+    &.data {
+        width: 80px;
+        font-weight: bold;
+    }
+    &.info {
+        width: 165px;
+    }
+  }
+  
+  .footer-container {
+    width: 80%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  .line {
+    color: $my_white;
+    width: 5vw;
+    height: 1px;
+    border-bottom: 2px solid $my_white;
+    position: absolute;
+    margin-top: -35px;
+    &.line-about {
+        margin-left: 135px;
+    }
+    &.line-get {
+        margin-left: 175px;
+    }
+    &.line-social {
+        margin-left: 175px;
+    }
+  }
+
+  
+  /******* GRID *******/
+
+  .container {
+    width: 100vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .row:before,
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  [class*="col-"] {
+    float: left;
+    min-height: 1px;
+    padding: 0;
+  }
+  /* For desktops: */
+
+  .col-1 {
+    width: 8.33%;
+  }
+
+  .col-2 {
+    width: 16.66%;
+  }
+
+  .col-3 {
+    width: 25%;
+  }
+
+  .col-4 {
+    width: 33.33%;
+  }
+
+  .col-5 {
+    width: 41.66%;
+  }
+
+  .col-6 {
+    width: 50%;
+  }
+
+  .col-7 {
+    width: 58.33%;
+  }
+
+  .col-8 {
+    width: 66.66%;
+  }
+
+  .col-9 {
+    width: 75%;
+  }
+
+  .col-10 {
+    width: 83.33%;
+  }
+
+  .col-11 {
+    width: 91.66%;
+  }
+
+  .col-12 {
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    /* For tablets: */
+    .col-m-1 {
+      width: 8.33%;
+    }
+    .col-m-2 {
+      width: 16.66%;
+    }
+    .col-m-3 {
+      width: 25%;
+    }
+    .col-m-4 {
+      width: 33.33%;
+    }
+    .col-m-5 {
+      width: 41.66%;
+    }
+    .col-m-6 {
+      width: 50%;
+    }
+    .col-m-7 {
+      width: 58.33%;
+    }
+    .col-m-8 {
+      width: 66.66%;
+    }
+    .col-m-9 {
+      width: 75%;
+    }
+    .col-m-10 {
+      width: 83.33%;
+    }
+    .col-m-11 {
+      width: 91.66%;
+    }
+    .col-m-12 {
+      width: 100%;
+    }
+    header {
+      text-align: center;
+      font-size: 35px;
+      >nav {
+        ul {
+          float: none;
+          >li {
+            display: inline-block;
+          }
+        }  
+      }
+    }
+    
+    .icon {
+      margin: 25px auto;
+    }
+    .square {
+      border: 6px solid;
+      width: 125px;
+      height: 125px;
+      @include border-radius(15px);
+    }
+    i {
+      margin: 20px;
+    }
+    .benefits p {
+      font-size: 12px;
+      font-weight: 3px;
+      margin: 3% 30%;
+    }
+    /******* TEAM *******/
+    .image-team {
+      width: 150px;
+      height: 150px;
+    }
+    .team-container {
+      &:hover {
+        .image-team {
+            opacity: 1;
+        }
+        .middle {
+            opacity: 1;
+        }
+      } 
+    }
+    
+    .team p {
+      visibility: hidden;
+    }
+    .footer-container {
+      width: 60vw;
+      padding-bottom: 3%;
+    }
+    .tablet {
+      text-align: center;
+    }
+    .tablet-border {
+      margin-top: 6%;
+      margin-left: 28%;
+      height: 35vh;
+      width: 35vw;
+      img {
+        width: 35vw;
+    }
+    }
+    
+    .works {
+      max-width: 80%;
+    }
+    .slogan {
+      margin: 14% 0;
+    }
+  }
+
+  @media (max-width: 580px) {
+    /* For phones: */
+    .col-s-1 {
+      width: 8.33%;
+    }
+    .col-s-2 {
+      width: 16.66%;
+    }
+    .col-s-3 {
+      width: 25%;
+    }
+    .col-s-4 {
+      width: 33.33%;
+    }
+    .col-s-5 {
+      width: 41.66%;
+    }
+    .col-s-6 {
+      width: 50%;
+    }
+    .col-s-7 {
+      width: 58.33%;
+    }
+    .col-s-8 {
+      width: 66.66%;
+    }
+    .col-s-9 {
+      width: 75%;
+    }
+    .col-s-10 {
+      width: 83.33%;
+    }
+    .col-s-11 {
+      width: 91.66%;
+    }
+    .col-s-12 {
+      width: 100%;
+    }
+    header>nav ul>li {
+      display: block;
+    }
+    .image-team {
+      width: 125px;
+      height: 125px;
+    }
+    .line {
+      width: 60px;
+    }
+    
+    .tablet {
+      text-align: center;
+      h2 {
+        font-size: 25px;
+        margin-top: 5px;
+      }
+    }
+    .tablet-border {
+      margin-top: 6%;
+      margin-left: 13%;
+      height: 35vh;
+      width: 55vw;
+      img {
+        height: 35vh;
+        width: 55vw;
+      }
+    }
+  }
