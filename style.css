@@ -30,7 +30,8 @@ header {
         text-decoration: none;
         text-transform: uppercase; }
         header > nav ul > li > a:hover {
-          background: #FFF; }
+          background: #FFF;
+          color: #000; }
   header > nav img {
     padding: 10px 0; }
 

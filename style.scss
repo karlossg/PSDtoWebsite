@@ -5,14 +5,15 @@
 
 /******* VARIABLES *******/
   $mainBackground: #313234;
-  $hoverBlue: #4C71BB;
+  $accentColor: #4C71BB;
   $mainParagraphAndHeadings: #989A9E;
   $mainFontColor: #FFF;
+  $hoverFontColor: #000;
   $secondaryBackgroundAndBorder: #FFF;
   $secondaryBlue: #7BC9E0;
 
 /******* MIXINS *******/
-@mixin border-radius($radius) {
+@mixin borderRadius($radius) {
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;
     -ms-border-radius: $radius;
@@ -61,6 +62,7 @@
             text-transform: uppercase;
             &:hover {
               background: $secondaryBackgroundAndBorder;
+              color: $hoverFontColor;
             }
           }
         }
@@ -95,7 +97,7 @@
   .icon {
     border: 6px solid;
     @include squareSize(125px);
-    @include border-radius (15px);
+    @include borderRadius (15px);
     margin: 50px auto;
     background-color: $mainBackground;
     color: $mainFontColor;
@@ -104,10 +106,10 @@
     }
     &:hover {
       cursor: pointer;
-      background-color: $hoverBlue;
+      background-color: $accentColor;
       color: $mainFontColor;
       ~h2 {
-        color: $hoverBlue;
+        color: $accentColor;
       }
     }
   }
@@ -211,7 +213,7 @@
       width: 35px;
       height: 32px;
       background-color: $secondaryBackgroundAndBorder;
-      @include border-radius(10%);
+      @include borderRadius(10%);
     }
     i {
       margin: 10px;
@@ -235,7 +237,7 @@
   }
 
   .image-team {
-    @include border-radius(50%);
+    @include borderRadius(50%);
     @include squareSize(200px);
   }
   /******* TABLET *******/
@@ -500,7 +502,7 @@
     .square {
       border: 6px solid;
       @include squareSize(125px);
-      @include border-radius(15px);
+      @include borderRadius(15px);
     }
     i {
       margin: 20px;
