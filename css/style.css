@@ -151,6 +151,7 @@ header {
   -moz-border-radius: 10%;
   -ms-border-radius: 10%;
   border-radius: 10%; }
+
 .visible i {
   margin: 10px; }
 
@@ -262,6 +263,7 @@ footer {
 .col-6.data {
   width: 80px;
   font-weight: bold; }
+
 .col-6.info {
   width: 165px; }
 
@@ -343,40 +345,28 @@ footer {
   /* For tablets: */
   .col-m-1 {
     width: 8.33%; }
-
   .col-m-2 {
     width: 16.66%; }
-
   .col-m-3 {
     width: 25%; }
-
   .col-m-4 {
     width: 33.33%; }
-
   .col-m-5 {
     width: 41.66%; }
-
   .col-m-6 {
     width: 50%; }
-
   .col-m-7 {
     width: 58.33%; }
-
   .col-m-8 {
     width: 66.66%; }
-
   .col-m-9 {
     width: 75%; }
-
   .col-m-10 {
     width: 83.33%; }
-
   .col-m-11 {
     width: 91.66%; }
-
   .col-m-12 {
     width: 100%; }
-
   header {
     text-align: center;
     font-size: 35px; }
@@ -384,10 +374,8 @@ footer {
       float: none; }
       header > nav ul > li {
         display: inline-block; }
-
   .icon {
     margin: 25px auto; }
-
   .square {
     border: 6px solid;
     width: 125px;
@@ -396,35 +384,27 @@ footer {
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     border-radius: 15px; }
-
   i {
     margin: 20px; }
-
   .benefits p, .left p, .center p, .right p {
     font-size: 12px;
     font-weight: 3px;
     margin: 3% 30%; }
-
   /******* TEAM *******/
   .image-team {
     width: 150px;
     height: 150px; }
-
   .team-container:hover .image-team {
     opacity: 1; }
   .team-container:hover .middle {
     opacity: 1; }
-
   .team p {
     visibility: hidden; }
-
   .footer-container {
     width: 60vw;
     padding-bottom: 3%; }
-
   .tablet {
     text-align: center; }
-
   .tablet-border {
     margin-top: 6%;
     margin-left: 28%;
@@ -432,66 +412,49 @@ footer {
     width: 35vw; }
     .tablet-border img {
       width: 35vw; }
-
   .works {
     max-width: 80%; }
-
   .slogan {
     margin: 14% 0; } }
+
 @media (max-width: 580px) {
   /* For phones: */
   .col-s-1 {
     width: 8.33%; }
-
   .col-s-2 {
     width: 16.66%; }
-
   .col-s-3 {
     width: 25%; }
-
   .col-s-4 {
     width: 33.33%; }
-
   .col-s-5 {
     width: 41.66%; }
-
   .col-s-6 {
     width: 50%; }
-
   .col-s-7 {
     width: 58.33%; }
-
   .col-s-8 {
     width: 66.66%; }
-
   .col-s-9 {
     width: 75%; }
-
   .col-s-10 {
     width: 83.33%; }
-
   .col-s-11 {
     width: 91.66%; }
-
   .col-s-12 {
     width: 100%; }
-
   header > nav ul > li {
     display: block; }
-
   .image-team {
     width: 125px;
     height: 125px; }
-
   .line {
     width: 60px; }
-
   .tablet {
     text-align: center; }
     .tablet h2 {
       font-size: 25px;
       margin-top: 5px; }
-
   .tablet-border {
     margin-top: 6%;
     margin-left: 13%;

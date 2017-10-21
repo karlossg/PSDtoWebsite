@@ -20,11 +20,11 @@
     border-radius: $radius;
   }
 
-@mixin transform($percent, $percent) {
-    -webkit-transform: translate($percent, $percent);
-    -moz-transform: translate($percent, $percent);
-    -ms-transform: translate($percent, $percent);
-    transform: translate($percent, $percent);
+@mixin transform($percent, $percent2) {
+    -webkit-transform: translate($percent, $percent2);
+    -moz-transform: translate($percent, $percent2);
+    -ms-transform: translate($percent, $percent2);
+    transform: translate($percent, $percent2);
   }
 
 @mixin squareSize ($size) {
