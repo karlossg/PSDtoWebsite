@@ -12,19 +12,10 @@ module.exports = function(grunt) {
           }
         }
       },
-    imagemin: {
-        dynamic: {
-            files: [{
-                expand: true,
-                cwd: './',
-                src: ['**/*.{png,jpg,gif}'],
-                dest: './'
-            }]
-        }
-    },
     browserSync: {
         bsFiles: {
-            src : 'css/*.css'
+            src : ['css/*.css',
+            'index.html']
         },
         options: {
             watchTask: true,
@@ -46,10 +37,9 @@ module.exports = function(grunt) {
   });
   // Load the plugins tasks
   grunt.loadNpmTasks('grunt-sass');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-contrib-watch');
   
   // Default task(s).
-  grunt.registerTask('default', ['sass', 'imagemin', 'browserSync', 'watch']);
+  grunt.registerTask('default', ['sass', 'browserSync', 'watch']);
 };
