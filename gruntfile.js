@@ -12,7 +12,6 @@ module.exports = function(grunt) {
           }
         }
       },
-    
     browserSync: {
         bsFiles: {
             src : ['css/*.css',
@@ -38,7 +37,6 @@ module.exports = function(grunt) {
   });
   // Load the plugins tasks
   grunt.loadNpmTasks('grunt-sass');
-  
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-contrib-watch');
   
